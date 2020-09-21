@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color: #4CAF50;} /* Green */
+.button2 {background-color: #008CBA;} /* Blue */
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #909;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #909;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #909;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #909;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #909;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color:    #909;
+}
+
+body{
+ background-color: #EE99EF;
+}
+</style>
+ 
+
+  <title>Fake News Detection</title>
+
+ 
+  
+  
+ 
+  
+		
+	</head>
+
+	<body>
+
+			
+	            
+
+				
+					
+					<header class="mb-5">
+					  <h1 align="center" color=white>Fake News Detection</h1></header>
+					  <br>
+					  <br>
+					  <br>
+					  <br>
+					
+                    <form align="center" action="{{ url_for('predict') }}"method="post">
+               	    	<div class="row form-section">
+
+							
+			                      <input name="news" type="text" class="form-control" id="text" placeholder="Enter the news url" required/><br>
+			                      <br>
+			                      <br>
+			                      <br>
+								  
+				  			
+							
+								<button class="button button2" type="submit" class="tm-btn-subscribe">Predict</button>
+
+							
+						    
+						</div>
+                    </form>
+                    <br>
+                    <br>
+               <div align="center">     {{ prediction_text }}  </div>
+                    
+					
+
+					
+					
+				
+			
+	</body>
+
+	
+</html>
